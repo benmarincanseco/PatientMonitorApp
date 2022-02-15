@@ -4,6 +4,7 @@ class Device:
         device.userId = userId
         device.function = function
         device.metric = metric
+
     def metricRetreive(self):
         return self.metric
 
