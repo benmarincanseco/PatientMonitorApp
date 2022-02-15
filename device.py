@@ -7,5 +7,5 @@ class Device:
     def metricRetreive(self):
         return self.metric
 
-    def metricUpdate(self,metric):
+    def metricUpdate(self, metric):
         self.metric = metric
