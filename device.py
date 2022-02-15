@@ -2,7 +2,7 @@ class Device:
 
     def __init__(device, userId, function, metric):
         device.userId = name
-        device.function = age
+        device.function = function
         device.metric = metric
     def metricRetreive(self):
         return self.metric
