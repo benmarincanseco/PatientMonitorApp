@@ -1,7 +1,7 @@
 class Device:
 
     def __init__(device, userId, function, metric):
-        device.userId = name
+        device.userId = userId
         device.function = function
         device.metric = metric
     def metricRetreive(self):
