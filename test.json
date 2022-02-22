@@ -1,0 +1,13 @@
+{
+  "device_id": 315,
+  "device_type": "Temperature",
+  "target_id": 465,
+  "value": 100,
+  "time": {
+    "year": 2042,
+    "month": 8,
+    "day": 26,
+    "hour": 14,
+    "minute": 5
+  }
+}

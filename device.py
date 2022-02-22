@@ -1,12 +1,15 @@
-class Device:
+import json
+import jsonschema
+import os
 
-    def __init__(device, userId, function, metric):
-        device.userId = userId
-        device.function = function
-        device.metric = metric
-
-    def metricRetreive(self):
-        return self.metric
-
-    def metricUpdate(self, metric):
-        self.metric = metric
+def validateData(fileName):
+    file=fileName+".json"
+    with open('deviceSchema.json') as deviceSchema:
+        schema = json.load(deviceSchema)
+    validator = jsonschema.Draft7Validator(schema)
+    if os.path.isfile(file) and os.access(file, os.R_OK):
+        with open(file,'r') as f:
+            data = json.load(f)
+        return list(validator.iter_errors(data))
+    else:
+        return ["Invalid file"]
