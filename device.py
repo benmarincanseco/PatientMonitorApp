@@ -4,7 +4,7 @@ import os
 
 
 def validateData(fileName):
-    file =f ileName + ".json"
+    file = fileName + ".json"
     with open('deviceSchema.json') as deviceSchema:
         schema = json.load(deviceSchema)
     validator = jsonschema.Draft7Validator(schema)
