@@ -25,15 +25,16 @@ def testInvalidType():
     assert actual == expected
 
 
-def testInvalidType():
-    actual = device.validateData("invalidType")
+def testInvalidValue():
+    actual = device.validateData("invalidValue")
     expected = "<ValidationError: \"'1' is not of type 'number'\">"
     assert actual == expected
 
 
 def testMissingTime():
-    actual = device.validateData("invalidType")
-    expected = "<ValidationError: \"None is not of type 'integer'\">, <ValidationError: \"None is not of type 'integer'\">"
+    actual = device.validateData("noHourMinute")
+    expected = "<ValidationError: \"None is not of type 'integer'\">,"\
+    " <ValidationError: \"None is not of type 'integer'\">"
     assert actual == expected
 
 
@@ -45,5 +46,9 @@ def testValid():
 
 def testMultipleErrors():
     actual = device.validateData("multiError")
-    expected = "<ValidationError: '-100 is less than the minimum of 1'>, <ValidationError: \"2 is not one of ['Temperature', 'Blood Pressure', 'Pulse', 'Oximeter', 'Weight', 'Glucometer']\">, <ValidationError: \"'Train' is not of type 'integer'\">, <ValidationError: \"None is not of type 'number'\">"
+    expected = "<ValidationError: '-100 is less than the minimum of 1'>, "\
+    "<ValidationError: \"2 is not one of ['Temperature', 'Blood Pressure', "\
+    "'Pulse', 'Oximeter', 'Weight', 'Glucometer']\">,"\
+    " <ValidationError: \"'Train' is not of type 'integer'\">, "\
+    "<ValidationError: \"None is not of type 'number'\">"
     assert actual == expected
