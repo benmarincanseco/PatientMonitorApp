@@ -11,6 +11,6 @@ def validateData(fileName):
     if os.path.isfile(file) and os.access(file, os.R_OK):
         with open(file, 'r') as f:
             data = json.load(f)
-        return str1 = ''.join(list(validator.iter_errors(data)))
+        return ''.join(list(validator.iter_errors(data)))
     else:
-        return str1 = ''.join(["Invalid file"])
+        return ''.join(["Invalid file"])
