@@ -1,0 +1,13 @@
+{
+  "device_id": -100,
+  "device_type": 2,
+  "target_id": "Train",
+  "value": null,
+  "time": {
+    "year": 2042,
+    "month": 8,
+    "day": 26,
+    "hour": 14,
+    "minute": 5
+  }
+}
