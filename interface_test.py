@@ -3,7 +3,7 @@ import device
 
 def testNoValidFile():
     actual = device.validateData("")
-    expected = "[\"Invalid file\"]"
+    expected = "['Invalid file']"
     assert actual == expected
 
 
