@@ -9,13 +9,13 @@ def testNoValidFile():
 
 def testInvalidID1():
     actual = device.validateData("invalidID1")
-    expected = "<ValidationError: '-102 is less than the minimum of 1'>"
+    expected = "[<ValidationError: '-102 is less than the minimum of 1'>]"
     assert actual == expected
 
 
 def testInvalidID2():
     actual = device.validateData("invalidID2")
-    expected = "<ValidationError: \"'car' is not of type 'integer'\">"
+    expected = "[<ValidationError: \"'car' is not of type 'integer'\">]"
     assert actual == expected
 
 
