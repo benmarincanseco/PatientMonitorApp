@@ -45,6 +45,12 @@ def testValid():
     assert actual == expected
 
 
+def testValidDevID():
+    actual = getDevID(device.convertFileToJson("deviceTestFiles/valid.json"))
+    expected = 315
+    assert actual == expected
+
+
 def testMultipleErrors():
     actual = device.validateData("deviceTestFiles/multiError")
     expected = "[<ValidationError: '-100 is less than the minimum of 1'>, "\
