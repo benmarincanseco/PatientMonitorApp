@@ -46,7 +46,7 @@ def testValid():
 
 
 def testValidDevID():
-    actual = getDevID(device.convertFileToJson("deviceTestFiles/valid.json"))
+    actual = device.getDevID(device.convertFileToJson("deviceTestFiles/valid.json"))
     expected = 315
     assert actual == expected
 
