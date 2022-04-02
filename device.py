@@ -43,13 +43,13 @@ def getUnit(jsonFile):
 
     accesor = getDevType(jsonFile)
     allowableUnits = {
-    "Temperature": "F",
-    "Blood Pressure": "mmHg",
-    "Pulse": "BPM",
-    "Oximeter": "%",
-    "Weight": "lbs",
-    "Glucometer": "mg/dL"
-    }
+        "Temperature": "F",
+        "Blood Pressure": "mmHg",
+        "Pulse": "BPM",
+        "Oximeter": "%",
+        "Weight": "lbs",
+        "Glucometer": "mg/dL"
+        }
     return allowableUnits[accesor]
 
 
