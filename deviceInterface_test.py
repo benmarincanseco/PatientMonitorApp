@@ -51,6 +51,60 @@ def testValidDevID():
     assert actual == expected
 
 
+def testValidDevType():
+    actual = device.getDevType(device.convertFileToJson("deviceTestFiles/valid.json"))
+    expected = 'Temperature'
+    assert actual == expected
+
+
+def testValidTargetID():
+    actual = device.getTarID(device.convertFileToJson("deviceTestFiles/valid.json"))
+    expected = 465
+    assert actual == expected
+
+
+def testValidValue():
+    actual = device.getValue(device.convertFileToJson("deviceTestFiles/valid.json"))
+    expected = 100
+    assert actual == expected
+
+
+def testValidUnit():
+    actual = device.getUnit(device.convertFileToJson("deviceTestFiles/valid.json"))
+    expected = 'F'
+    assert actual == expected
+
+
+def testValidYear():
+    actual = device.getYear(device.convertFileToJson("deviceTestFiles/valid.json"))
+    expected = 2042
+    assert actual == expected
+
+
+def testValidMonth():
+    actual = device.getMonth(device.convertFileToJson("deviceTestFiles/valid.json"))
+    expected = 8
+    assert actual == expected
+
+
+def testValidDay():
+    actual = device.getDay(device.convertFileToJson("deviceTestFiles/valid.json"))
+    expected = 26
+    assert actual == expected
+
+
+def testValidHour():
+    actual = device.getHour(device.convertFileToJson("deviceTestFiles/valid.json"))
+    expected = 14
+    assert actual == expected
+
+
+def testValidMinute():
+    actual = device.getMinute(device.convertFileToJson("deviceTestFiles/valid.json"))
+    expected = 5
+    assert actual == expected
+
+
 def testMultipleErrors():
     actual = device.validateData("deviceTestFiles/multiError")
     expected = "[<ValidationError: '-100 is less than the minimum of 1'>, "\

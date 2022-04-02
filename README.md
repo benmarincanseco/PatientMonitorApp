@@ -6,7 +6,7 @@ I will have two branches: a main branch and a dev branch. I will work on every p
 Made the device module interface. It has a function to validate the data coming from a JSON file from a device and make sure it follows the correct schema to be put into a database system. Have functions to read specific keys from the JSON
 data that either comes from the server or client devices. Each data field has a
 corresponding function that can retrieve each specific key. Also have a helper function to convert file with a .json extension to a python dict to be used in
-the program.
+the program. There is also a unit getter function to get the corresponding SI units for American medical institutes.
 
 Here is an example device JSON.
 #### Device JSON Input
