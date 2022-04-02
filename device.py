@@ -3,7 +3,7 @@ import jsonschema
 import os
 
 
-#Function to validate that the data that is inputed is in the proper format
+# Function to validate that the data that is inputed is in the proper format
 def validateData(fileName):
     file = fileName + ".json"
     with open('deviceSchema.json') as deviceSchema:
@@ -17,28 +17,28 @@ def validateData(fileName):
         return str(["Invalid file"])
 
 
-#Access specific Keys functions
-#Get Device ID
+# Access specific Keys functions
+# Get Device ID
 def getDevID(jsonFile):
     return jsonFile['device_id']
 
 
-#Get Device Type
+# Get Device Type
 def getDevType(jsonFile):
     return jsonFile['device_type']
 
 
-#Get Target ID
+# Get Target ID
 def getTarID(jsonFile):
     return jsonFile['target_id']
 
 
-#Get Specific Metric
+# Get Specific Metric
 def getValue(jsonFile):
     return jsonFile['value']
 
 
-#Get Unit
+# Get Unit
 def getUnit(jsonFile):
 
     accesor = getDevType(jsonFile)
@@ -54,35 +54,33 @@ def getUnit(jsonFile):
 
 
 # Time getter functions
-#Get Year
+# Get Year
 def getYear(jsonFile):
     return jsonFile['time']['year']
 
 
-#Get Month
+# Get Month
 def getMonth(jsonFile):
     return jsonFile['time']['month']
 
 
-#Get Day
+# Get Day
 def getDay(jsonFile):
     return jsonFile['time']['day']
 
 
-#Get Hour
+# Get Hour
 def getHour(jsonFile):
     return jsonFile['time']['hour']
 
 
-#Get Minute
+# Get Minute
 def getMinute(jsonFile):
     return jsonFile['time']['minute']
 
 
-#Import JSON File Helper Function
+# Import JSON File Helper Function
 def convertFileToJson(filePath):
     with open(filePath, 'r') as f:
         data = json.load(f)
     return data
-
-print(convertFileToJson('deviceTestFiles/valid.json'))
