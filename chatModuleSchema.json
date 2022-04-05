@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Chat Module Schema",
+  "description":"This is the json format for my chat messages",
+  "type": "object",
+    "properties": {
+        "sender_id": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9999999999
+        },
+        "receiver_id": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9999999999
+        },
+        "message": {"type": "string"},
+        "time":
+        {
+          "type": "object",
+          "properties":{
+            "year": {
+              "type": "integer",
+              "minimum": 2022,
+              "maximum": 2100
+            },
+            "month": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 12
+            },
+            "day": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 31
+            },
+            "hour": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 24
+            },
+            "minute": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 60
+            }
+            }
+        }
+    },
+    "required": ["sender_id","receiver_id", "message","time"],
+    "additionalProperties": false
+}

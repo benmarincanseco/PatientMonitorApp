@@ -1,2 +1,4 @@
 jsonschema
 flask-restful
+flask-sqlalchemy
+mysql-connector-python

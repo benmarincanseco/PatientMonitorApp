@@ -16,6 +16,10 @@ Here is an example device JSON.
 [Device Schema][1]
 
 ## Phase 2 In Progress
+For phase 2 I integrated my device Module into a restful system using Flask. To
+keep data persistence I used an sqlight database. I then used and EC2 instance from Amazon AWS to host it and made a simple web app to test the API and its endpoints.
+
+Insert graph of endpoints and show proof from web app
 
 ## Phase 3 In Progress
 
