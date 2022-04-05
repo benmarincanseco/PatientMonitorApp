@@ -1,5 +1,7 @@
 import json
 # Messages are going be in json format
+
+
 # Time getter functions
 # Get Year
 def getYear(jsonFile):
@@ -31,6 +33,8 @@ def convertFileToJson(filePath):
     with open(filePath, 'r') as f:
         data = json.load(f)
     return data
+
+
 # Access specific Keys functions
 # Get Device ID
 def getSender(jsonFile):
